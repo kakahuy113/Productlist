@@ -1,0 +1,41 @@
+
+<h1 class="text-center  ">Product List View</h1>
+<div class="card rounded">
+    <div class="card-header bg-primary">Header</div>
+    <div class="card-body">
+        <form >
+            <label for="exampleFormControlInput1">Filter: </label>
+            <input class="ml-5" type="text" id="exampleFormControlInput1" [(ngModel)]="searchText" name="filter">
+        </form>
+      
+        <table class="table" id="searchTextResults">
+                <thead>
+                  <tr class="table-borderless">
+                    <th scope="col">
+                        <button class="btn btn-primary" (click) = "toggleEdit()"> {{isEdit ? 'Hide Image' : 'Show Image'}}</button>
+                    </th>
+                    <th scope="col">Products</th>
+                    <th scope="col">Code</th>
+                    <th scope="col">Available</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">5 Star Rating</th>
+                  </tr>
+                </thead>
+                <tbody>
+                 <tr *ngFor = 'let product of listofProduct | filter:searchText'>
+                     
+                    
+                        <td>
+                                <img *ngIf="isEdit" [src]="product.urlImage" alt="" width="40px" height="40px">
+                        </td>
+                    
+                    <td>{{product.product}}</td>
+                    <td>{{product.code}}</td>
+                    <td>{{product.available}}</td>
+                    <td>{{product.Price | currency}}</td>
+                    <td>{{product.rating}}</td>
+                 </tr>
+                </tbody>
+              </table>
+    </div>
+</div>
