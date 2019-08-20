@@ -1,7 +1,7 @@
 # Setup
 ```
-  git clone https://github.com/kakahuy113/ITC.git
-  cd ITC/product   
+  git clone https://github.com/kakahuy113/Productlist.git
+  cd productlist   
 ```
 # Install
 ```
