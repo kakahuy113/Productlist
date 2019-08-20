@@ -1,7 +1,7 @@
 
 <h1 class="text-center  ">Product List View</h1>
 <div class="card rounded">
-    <div class="card-header bg-primary">Header</div>
+    <div class="card-header bg-primary">Product List</div>
     <div class="card-body">
         <form >
             <label for="exampleFormControlInput1">Filter: </label>
@@ -33,7 +33,11 @@
                     <td>{{product.code}}</td>
                     <td>{{product.available}}</td>
                     <td>{{product.Price | currency}}</td>
-                    <td>{{product.rating}}</td>
+                    <td>
+                      <div class="justify-center">
+                        <star-rating [value] = "product.rating" checkedcolor="black" uncheckedcolor="grey" size="24px"></star-rating>
+                      </div>  
+                    </td>
                  </tr>
                 </tbody>
               </table>

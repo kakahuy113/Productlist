@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
     "express": "^4.17.1",
+    "ng-starrating": "^1.0.7",
     "ng2-search-filter": "^0.5.1",
     "path": "^0.12.7",
     "rxjs": "~6.4.0",
@@ -49,7 +50,7 @@
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
   },
-  "engines":{
+  "engines": {
     "node": "10.16.0",
     "npm": "6.9.0"
   }

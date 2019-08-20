@@ -22,7 +22,7 @@ export class ProductsComponent implements OnInit {
       code : 'GDN-0011',
       available : 'Mar 14,2016',
       Price : '18.95',
-      rating : 3.2,
+      rating : 1.6,
       urlImage: "../assets/images/garden-cart.jpg"
     },
     {
@@ -30,7 +30,7 @@ export class ProductsComponent implements OnInit {
       code : 'GDN-0011',
       available : 'Mar 14,2016',
       Price : '18.95',
-      rating : 3.2,
+      rating : 2.5,
       urlImage: "../assets/images/hammer.jpg"
     },
     {
@@ -38,7 +38,7 @@ export class ProductsComponent implements OnInit {
       code : 'GDN-0011',
       available : 'Mar 14,2016',
       Price : '18.95',
-      rating : 3.2,
+      rating : 4.8,
       urlImage: "../assets/images/saw.jpg"
     },
     {
@@ -46,7 +46,7 @@ export class ProductsComponent implements OnInit {
       code : 'GDN-0011',
       available : 'Mar 14,2016',
       Price : '18.95',
-      rating : 3.2,
+      rating : 0.2,
       urlImage: "../assets/images/video-game-controller.jpg"
     },
 
