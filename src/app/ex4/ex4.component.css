@@ -1,0 +1,92 @@
+.row {
+    min-height: calc(100vh - 10px) 
+}
+.side-bar {
+    background-color: #ccc;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 43px;
+    z-index: 1;
+    width: 250px;
+}
+.btn-toggle span {
+    background-color: #000;    
+    display:block;
+    width:30px;
+    height:5px;
+    position: absolute;
+    top:20px;
+    right: 10px;   
+}
+
+.btn-toggle span:after {
+    content: "";
+    background-color: #000;    
+    display:block;
+    width:30px;
+    height:5px;
+    position: absolute;
+    top:10px;  
+}
+.btn-toggle span:before {
+    content: "";
+    background-color: #000;    
+    display:block;
+    width:30px;
+    height:5px;
+    position: absolute;
+    top: -10px;  
+}
+
+span .active {
+    display: none !important;
+}
+span:before .acitve{
+    transform: rotate(45deg)
+}
+
+.user-img {
+    display: block;
+    top: 50px;
+    position: absolute;
+    left: 94px;
+}
+.list-group {
+    top: 150px;
+    display: block;
+    position: absolute;
+}
+
+.list-group-item, .list-group-item-action {
+    background-color: #ccc !important;
+    border: none;
+    color: #000;
+    margin-bottom: 0 !important;
+    padding: 7px !important;
+}
+row {
+    padding: 50px;
+}
+.content {
+    position: relative;
+    background: #fff;
+    left: 250px;
+    margin-top: 20px;
+}
+.add-employee {
+    position: absolute;
+    right: -60px;
+}
+
+.table {
+    position: absolute;
+    text-align: center;
+    right: -40px;
+}
+.table td {
+    vertical-align: middle;
+}
+.nav-ex5 {
+    background: #ccc;
+}

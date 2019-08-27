@@ -9,21 +9,32 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
+import { NavComponent } from './nav/nav.component';
+import { AppRoutingModule } from './app-routing.module';
+import { Ex1Component } from './ex1/ex1.component';
+import { Ex2Component } from './ex2/ex2.component';
+import { Ex4Component } from './ex4/ex4.component';
+import { EmployeeService } from './service/employee.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
-    DetailProductComponent
+    DetailProductComponent,
+    NavComponent,
+    Ex1Component,
+    Ex2Component,
+    Ex4Component
   ],
   imports: [
     BrowserModule,
     FormsModule,
     Ng2SearchPipeModule,
     RatingModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
-  providers: [DataService],
+  providers: [DataService , EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
