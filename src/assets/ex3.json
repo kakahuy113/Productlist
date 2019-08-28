@@ -1,0 +1,20 @@
+[
+    { 
+    "id" : "pd100",
+    "urlImage": "../assets/images/leaf-rake.jpg",
+    "name" : "Laptop",
+    "price" : 50000
+    },
+    { 
+        "id" : "pd101",
+        "urlImage": "../assets/images/leaf-rake.jpg",
+        "name" : "Laptop",
+        "price" : 50000
+    },
+    { 
+        "id" : "pd102",
+        "urlImage": "../assets/images/leaf-rake.jpg",
+        "name" : "Laptop",
+        "price" : 50000
+    }
+]

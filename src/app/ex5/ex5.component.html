@@ -1,0 +1,52 @@
+<div class="container">
+    <nav class="mb-5 navbar navbar-expand-sm bg-light">
+        <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link navbar-brand">Muatc</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" >Home</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link active" >Cart</a>
+                </li>
+         </ul>      
+    </nav>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="row">ID</th>
+                <th scope="row">Image</th>
+                <th scope="row">Name</th>
+                <th scope="row">Price</th>
+                <th scope="row">Quantity</th>
+                <th scope="row">Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = 'let product of products'>
+                <td>{{product.id}}</td>
+                <td><img src="{{product.image}}" alt="laptop"></td>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>{{ quantities[product.id] }}
+                    <div class="btn-group ml-3">
+                        <button class="btn btn-success mr-2" (click)="onIncreaseQuantities(product.id)">+</button>
+                        <button class="btn btn-danger" (click)="onDecreaseQuantities(product.id)">-</button>
+                    </div>
+                </td>
+                <td>
+                    <button class="btn btn-primary mr-2">View</button>
+                    <button class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total Price</td>
+                <td colspan="5" style="text-align: right">{{ totalPrice() | currency:"VND" }}</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

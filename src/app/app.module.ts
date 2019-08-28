@@ -15,6 +15,8 @@ import { Ex1Component } from './ex1/ex1.component';
 import { Ex2Component } from './ex2/ex2.component';
 import { Ex4Component } from './ex4/ex4.component';
 import { EmployeeService } from './service/employee.service';
+import { Ex5Component } from './ex5/ex5.component';
+import { Ex3Service } from './service/ex3.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { EmployeeService } from './service/employee.service';
     NavComponent,
     Ex1Component,
     Ex2Component,
-    Ex4Component
+    Ex4Component,
+    Ex5Component
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,7 @@ import { EmployeeService } from './service/employee.service';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [DataService , EmployeeService],
+  providers: [DataService , EmployeeService, Ex3Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
