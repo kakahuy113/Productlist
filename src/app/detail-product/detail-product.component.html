@@ -1,7 +1,7 @@
 <div class="mt-5" *ngIf=product>
     <div class="card mt-5 mb-5">
         <div class="card-header">
-            {{name}}
+            {{product.product}}
         </div>
         <div class="card-body">
             <div class="row">
@@ -11,10 +11,10 @@
             <strong>Description :</strong> {{Description}} <br>
             <strong>availability :</strong> {{product.availability}} <br>
             <strong>Price :</strong> {{product.Price}} <br>
-            <strong>5 Strang Rating :</strong> {{product.rating}} <br>
+            <strong>5 Start Rating :</strong> {{product.rating}} <br>
             </div>
             <div class="col">
-                <img [src]="product.urlImage" alt="Leaf-rake">
+                <img [src]="product.urlImage" alt="{{product.product}}">
             </div>
             </div>
         </div>
