@@ -1,5 +1,5 @@
-<div class="container">
-<app-detail-product></app-detail-product>
+<div class="container mt-5">
+  <app-detail-product [product] ="selectproduct"></app-detail-product>
 <h1 class="text-center  ">Product List View</h1>
 <div class="card rounded">
     <div class="card-header bg-primary">Product List</div>
@@ -23,14 +23,14 @@
                   </tr>
                 </thead>
                 <tbody>
-                 <tr *ngFor = 'let product of listofProduct | filter:searchText'>
+                 <tr *ngFor = 'let product of listofProduct | filter:searchText' >
                      
                     
                         <td>
                                 <img *ngIf="isEdit" [src]="product.urlImage" alt="" width="40px" height="40px">
                         </td>
                     
-                    <td>{{product.product}}</td>
+                    <td class="text-danger" style="cursor: pointer; " (click) ="onselect(product)">{{product.product}}</td>
                     <td>{{product.code}}</td>
                     <td>{{product.available}}</td>
                     <td>{{product.Price | currency}}</td>
@@ -44,4 +44,5 @@
               </table>
     </div>
 </div>
+
 </div>

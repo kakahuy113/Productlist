@@ -3,7 +3,7 @@
         "product" : "Leaf Rake",
         "code" : "GDN-0011",
         "available" : "Mar 14,2016",
-        "Price" : "18.95",
+        "Price" : 18.95,
         "rating" : 3.2,
         "urlImage": "../assets/images/leaf-rake.jpg"
       },

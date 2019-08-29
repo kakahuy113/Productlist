@@ -1,71 +1,63 @@
-<div class="row mt-5">
-        <div class="side-bar col-sm-3">
-            <div class="btn-toggle">
-                <span></span>
+
+<div class="sidenav mt-5">
+        <a style="font-size: 35px" class="float-right"><i class="	fas fa-align-justify"></i></a> <br> <br> <br> <br>
+        <div class="user-img">
+            <img src="../../assets/images/bootstrap-stack.png" alt="bootstrap" width="70px">
+            <p mt-2>
+                bootstrap
+            </p>
+        </div> <br> <br> <br>
+        <a><i class="fas fa-home"></i> Home</a>
+        <a><i class="fas fa-user"></i> Employee</a>
+        <a><i class="	fas fa-file"></i> Projects</a>
+        <a><i class="fas fa-pen"></i> Skill</a>
+        <a><i class="fas fa-user-graduate"></i> Interns</a>
+        <a ><i class="fas fa-bookmark"></i> Topics</a>
+        <a ><i class="fas fa-book"></i> Courses</a>
+        <a><i class="fas fa-bookmark"></i>  Topic_Course</a>
+        <a><i class="fas fa-folder-open"></i> Classes</a>
+      </div>
+      
+      <div class="main mt-5">
+        <div><a routerLink="/ex5">Home</a>/Skills</div>
+        <br> 
+        <nav class="navbar navbar-light bg-light">    
+            Show:
+            <div class="fixed">
+                <select class="form-control ml-5">
+                    <option  *ngFor="let employee of listEmployees">{{employee.id}}</option>
+                </select>
             </div>
-            <div class="user-img">
-                <img src="../../assets/images/video-game-controller.jpg" alt="bootstrap" width="70px">
-                <p mt-2>
-                    bootstrap
-                </p>
-            </div>
-            <div class="list-group">
-                <button type="button" class="list-group-item list-group-item-action">Home</button>
-                <button type="button" class="list-group-item list-group-item-action">Employees</button>
-                <button type="button" class="list-group-item list-group-item-action">Projects</button>
-                <button type="button" class="list-group-item list-group-item-action">Skills</button>
-                <button type="button" class="list-group-item list-group-item-action">Interns</button>
-                <button type="button" class="list-group-item list-group-item-action">Topic</button>
-                <button type="button" class="list-group-item list-group-item-action">Courses</button>
-                <button type="button" class="list-group-item list-group-item-action">Topic Course</button>
-                <button type="button" class="list-group-item list-group-item-action">Classes</button>
-                </div>
-        </div>
-        <div class="col-sm-9 content">
-            <div class="route"><a routerLink="/exercise/5">items</a> / item </div>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light nav-ex5">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    
-    
-                    <span class="mr-4">Show</span>
-                    <div>
-                        <select class="form-control form-control-md mr-3">
-                            <option  *ngFor="let employee of listEmployees">{{employee.id}}</option>
-                        </select>
-                    </div>
-                    <div class="button-group" style="margin-left: 20%">
-                        <button class="btn btn-primary mr-1">Excel</button>
-    
-                        <button class="btn btn-primary">PDF </button>
-                    </div>
-                    <div class="collapse navbar-collapse ml-3" id="navbarSupportedContent">
-                        <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                        </form>
-                    </div>
-                    <button class="btn btn-primary add-employee"> + Add Employee </button>
-                </nav>
-                <table class="table table-bordered">
-                    <thead>
-                        <th>ID</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Action</th>
-                    </thead>
-                    <tbody *ngFor='let employee of listEmployees'>
-                        <tr>
-                            <td>{{ employee.id }}</td>
-                            <td>{{ employee.firstName }}</td>
-                            <td>{{ employee.lastName }}</td>
-                            <td>{{ employee.email }}</td>
-                            <td>
-                                action
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-        </div>
-    </div>
+            
+            <form class="form-inline">
+                <button class="btn btn-primary mr-2">Excel</button>
+                <button class="btn btn-primary">PDF </button>
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              <button class="btn btn-primary add-employee ml-2"> + Add Employee </button>
+            </form>
+          
+          </nav>
+          <table class="table table-bordered">
+              <thead>
+                  <th>ID</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Email</th>
+                  <th>Action</th>
+              </thead>
+              <tbody *ngFor='let employee of listEmployees'>
+                  <tr>
+                      <td>{{ employee.id }}</td>
+                      <td>{{ employee.firstName }}</td>
+                      <td>{{ employee.lastName }}</td>
+                      <td>{{ employee.email }}</td>
+                      <td>
+                          <i class="fas fa-exclamation mr-3"></i>
+                          <i class="fas fa-pencil-alt mr-3"></i>
+                          <i class="fas fa-trash-alt mr-1"></i>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
