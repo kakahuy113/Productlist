@@ -1,0 +1,55 @@
+
+
+<div class="container mt-5">
+  
+    <h1 class="text-center  ">Your Cart</h1>
+    <div class="card rounded">
+        <div class="card-header bg-primary">
+          <div class="row">
+            <div class="col"><a routerLink="/product"><button class="btn btn-danger w-100">Product List</button></a></div>
+            <div class="col"><a routerLink="/UrCart"><button class="btn btn-danger w-100">Your Card!!!</button></a></div>
+          </div>
+        </div>
+        <div class="card-body">
+          
+            <table class="table" id="searchTextResults">
+                    <thead>
+                      <tr class="table-borderless">
+                        <th scope="col">Image</th>
+                        <th scope="col">Products</th>
+                        <th scope="col">Code</th>
+                        <th scope="col">Available</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">5 Star Rating</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let product of items">
+                            <td><img [src]="product.urlImage" alt="Image" style="width: 50px; height: 50px;"></td>
+                            <td>{{product.product}}</td>
+                            <td>{{product.code}}</td>
+                            <td>{{product.available}}</td>
+                            <td>{{product.Price | currency}}</td>
+                            <td> <star-rating [value] = "product.rating" checkedcolor="black" uncheckedcolor="grey" size="24px"></star-rating></td>
+                            
+                    </tbody>
+                          <tfoot>
+                              <td colspan="5">Total: </td>
+                              <td>$10000</td>
+                          </tfoot>
+                  </table>
+                  
+        </div>
+        <div class="card-footer">
+          <div class="row">
+            <div class="col">
+              <button type="button" class="btn btn-secondary w-100" (click)="back()">Back</button>
+            </div>
+            <div class="col">
+             <a href="/product"><button type="button" class="btn btn-secondary w-100" >Buy</button></a>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    </div>
+    

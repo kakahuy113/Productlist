@@ -1,4 +1,5 @@
-[
+import { products } from './product'
+export const product : products[]=  [
     {
         "id" : 1,
         "product" : "Leaf Rake",

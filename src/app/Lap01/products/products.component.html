@@ -1,8 +1,13 @@
 <div class="container mt-5">
-  <app-detail-product [product] ="selectproduct"></app-detail-product>
+  
 <h1 class="text-center  ">Product List View</h1>
 <div class="card rounded">
-    <div class="card-header bg-primary">Product List</div>
+    <div class="card-header bg-primary">
+      <div class="row">
+        <div class="col"><a routerLink="/product"><button class="btn btn-danger w-100">Product List</button></a></div>
+        <div class="col"><a routerLink="/UrCart"><button class="btn btn-danger w-100">Your Card!!!</button></a></div>
+      </div>
+    </div>
     <div class="card-body">
         <form >
             <label for="exampleFormControlInput1">Filter: </label>
@@ -30,7 +35,7 @@
                                 <img *ngIf="isEdit" [src]="product.urlImage" alt="" width="40px" height="40px">
                         </td>
                     
-                    <td class="text-danger" style="cursor: pointer; " (click) ="onselect(product)">{{product.product}}</td>
+                    <td class="text-danger" style="cursor: pointer; " routerLink='detail/{{product.id}}'>{{product.product}}</td>
                     <td>{{product.code}}</td>
                     <td>{{product.available}}</td>
                     <td>{{product.Price | currency}}</td>

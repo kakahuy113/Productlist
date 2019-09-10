@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../service/data.service';
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -13,17 +14,9 @@ export class ProductsComponent implements OnInit {
   toggleEdit() {
     this.isEdit = !this.isEdit;
   }
-  selectproduct : {
-    product : String,
-    code : String,
-    available : String,
-    Price: Number,
-    rating : Number,
-    urlImage : String
-  };
-  onselect( product) {
-    this.selectproduct = product
-  }
+ 
+ 
+  
 
   ngOnInit() {
     this.data.getdata().subscribe(
