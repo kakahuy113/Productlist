@@ -16,7 +16,8 @@
                                 <th>EnrollDate</th>
                                 <th>Action</th>
                         </thead>
-                        <tbody  *ngIf="listStudents.length > 0; else nothing"  >
+                        
+                        <tbody  *ngIf="listStudents.length > 0"  > <!-- else nothing for if u delete all u will see text in ng templete -->
                                 <tr *ngFor="let student of listStudents | paginate: config | filter : searchText  ">
                                 <td>{{student.lastName}}</td>
                                 <td>{{student.firstName}}</td>
