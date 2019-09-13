@@ -1,12 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import { CartService } from '../service/cart.service';
 import { product } from '../models/products'; 
 import { Location } from '@angular/common'
-import { products } from '../models/product';
 @Component({
   selector: 'app-detail-product',
-  templateUrl: './detail-product.component.html',
+  templateUrl: './detail-product.component.html', 
   styleUrls: ['./detail-product.component.css']
 })
 

@@ -1,0 +1,45 @@
+<div class="alert alert-secondary mt-5"><a href="#" class="active text-muted"><strong style="font-size: 20px">Home</strong></a>/  
+        <a class="text-primary"> Student</a>
+</div>
+
+<div class="card">
+        <div class="card-header"><i class="fas fa-table"> </i> List of students</div>
+         <div class="card-body">
+                <form action="" class="form-inline">
+                <input type="text" class="form-control" placeholder="Search for..." name="search"  [(ngModel)]="searchText">
+                        <a class="btn btn-primary text-light"><i class="fas fa-search"></i></a>
+                 </form>
+                <table class="table table-bordered">
+                        <thead>
+                                <th>LastName</th>
+                                <th>FirstName</th>
+                                <th>EnrollDate</th>
+                                <th>Action</th>
+                        </thead>
+                        <tbody  *ngIf="listStudents.length > 0; else nothing"  >
+                                <tr *ngFor="let student of listStudents | paginate: config | filter : searchText  ">
+                                <td>{{student.lastName}}</td>
+                                <td>{{student.firstName}}</td>
+                                <td>{{student.enrollmentDate}}</td>
+                                <td>
+                                        <a routerLink="/lab02/student/{{student.id}}"><code ><i class="fas fa-exclamation"></i></code></a>
+                                        <i class="far fa-trash-alt ml-2" style="cursor: pointer" (click)="onDeleteStudent(student.id)"></i>
+                                </td>
+                                </tr>
+                        </tbody>
+                       <!--  <ng-template #nothing>
+                                <tr>
+                                <td colspan="4">Nothing...</td>
+                                </tr>
+                        </ng-template> -->
+                </table>
+        </div>
+<div class="card-footer">
+        <div class="row">
+                <div class="col-sm-3">
+                        showing {{config.currentPage}} of {{listStudents.length/config.itemsPerPage | number:"1.0-0" }}
+                </div>
+                <pagination-controls (pageChange)="pageChanged($event)" class="col-sm-7 offset-sm-2"></pagination-controls>
+        </div>     
+</div>
+</div>

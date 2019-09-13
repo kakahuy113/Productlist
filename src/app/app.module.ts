@@ -5,6 +5,7 @@ import { RatingModule } from 'ng-starrating';
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
 import { DataService } from './Lap01/service/data.service';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './Lap01/products/products.component';
@@ -19,6 +20,9 @@ import { Ex5Component } from './Lap01/ex5/ex5.component';
 import { Ex3Service } from './Lap01/service/ex3.service';
 import { CartComponent } from './Lap01/cart/cart.component';
 import { ListComponent } from './Lap01/list/list.component';
+import { StudentComponent } from './Lap02/student/student.component';
+import { StudentDetailComponent } from './Lap02/student-detail/student-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -32,6 +36,9 @@ import { ListComponent } from './Lap01/list/list.component';
     Ex5Component,
     CartComponent,
     ListComponent,
+    StudentComponent,
+    StudentDetailComponent,
+    
     
   ],
   imports: [
@@ -40,7 +47,8 @@ import { ListComponent } from './Lap01/list/list.component';
     Ng2SearchPipeModule,
     RatingModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxPaginationModule
   ],
   providers: [DataService , EmployeeService, Ex3Service],
   bootstrap: [AppComponent]

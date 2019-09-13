@@ -8,6 +8,8 @@ import { Ex5Component } from './Lap01/ex5/ex5.component';
 import {DetailProductComponent } from './Lap01/detail-product/detail-product.component';
 import { CartComponent } from './Lap01/cart/cart.component'
 import { ListComponent} from './Lap01/list/list.component';
+import { StudentComponent } from './Lap02/student/student.component';
+import { StudentDetailComponent } from './Lap02/student-detail/student-detail.component';
 const routes: Routes = [
   { path: 'product', component: ProductsComponent  },
   { path: 'ex1', component: Ex1Component  },
@@ -17,6 +19,8 @@ const routes: Routes = [
   { path: 'product/detail/:id' , component : DetailProductComponent },
   { path: 'UrCart' , component : CartComponent},
   { path: 'lab01' , component : ListComponent},
+  { path: 'lab02/student', component : StudentComponent },
+  { path: 'lab02/student/:id', component : StudentDetailComponent }
 
 ];
 

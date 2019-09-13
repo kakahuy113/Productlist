@@ -1,0 +1,30 @@
+<div class="alert alert-secondary mt-5"><a href="#" class="active text-muted"><strong style="font-size: 20px">Home</strong></a>/  
+    <a (click)="back()" class="text-primary" style="cursor: pointer"> Student</a> / {{student.firstName}}
+</div>
+<div class="card" >
+    <div class="card-header"><i class="fas fa-table"> </i> Detail</div>
+    <div class="card-body">
+        Last Name <br>
+        {{student.lastName}} <br>
+        First Name <br>
+        {{student.firstName}} <br>
+        Enroll Date <br>
+        {{student.enrollmentDate | date:"dd/MM/yyyy"}} <br>
+       
+        <table class="table table-bordered">
+                <thead>
+                    <th>Course Title</th>
+                    <th>Grade</th>
+                    <th>Credits</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let enrollment of enrollments">
+                        <td>{{ courses[enrollment.courseId].title }}</td>
+                        <td> {{ enrollment.grade }}</td>
+                        <td>{{ courses[enrollment.courseId].credits }}</td>
+                    </tr>
+                </tbody>
+            </table>
+      
+    </div>
+</div>
