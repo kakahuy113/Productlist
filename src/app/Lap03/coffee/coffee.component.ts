@@ -11,19 +11,22 @@ export class CoffeeComponent implements OnInit {
       id: 1,
       name: "Nước ngọt",
       price: 10000,
-      amount: null
+      amount: null,
+      checked : false
     },
     {
       id: 2,
       name: "Cà phê đen",
       price: 12000,
       amount: null,
+      checked : false
     },
     {
       id: 3,
       name: "Thuốc lá",
       price: 18000,
       amount: null,
+      checked : false
     }
   ];
   constructor() { }
@@ -33,6 +36,7 @@ export class CoffeeComponent implements OnInit {
   Total() {
     let total = 0;
     for (let item of this.listitems) {
+      if(item.checked)
       total += item.amount * item.price;
     }
     return total;
