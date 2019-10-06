@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
 import { RatingModule } from 'ng-starrating';
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
 import { DataService } from './Lap01/service/data.service';
@@ -22,7 +22,10 @@ import { CartComponent } from './Lap01/cart/cart.component';
 import { ListComponent } from './Lap01/list/list.component';
 import { StudentComponent } from './Lap02/student/student.component';
 import { StudentDetailComponent } from './Lap02/student-detail/student-detail.component';
-
+import { SquareComponent } from './Lap03/square/square.component';
+import { StudentComponent2 } from './Lap03/student/student.component';
+import { NewyearComponent } from './Lap03/newyear/newyear.component';
+import { CoffeeComponent } from './Lap03/coffee/coffee.component'
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { StudentDetailComponent } from './Lap02/student-detail/student-detail.co
     ListComponent,
     StudentComponent,
     StudentDetailComponent,
-    
+    SquareComponent,
+    StudentComponent2,
+    NewyearComponent,
+    CoffeeComponent
     
   ],
   imports: [
@@ -48,7 +54,8 @@ import { StudentDetailComponent } from './Lap02/student-detail/student-detail.co
     RatingModule,
     HttpClientModule,
     AppRoutingModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    ReactiveFormsModule
   ],
   providers: [DataService , EmployeeService, Ex3Service],
   bootstrap: [AppComponent]

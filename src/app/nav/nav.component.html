@@ -1,16 +1,37 @@
 <header>
-    <nav class="mb-5 navbar navbar-expand-sm bg-light sidenav">
-        <ul class="navbar-nav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+       
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link navbar-brand active" routerLink="/">Home</a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link" routerLink="/lab01">LAB 1</a>
+                    <a class="nav-link" routerLink="/lab01">LAB 1</a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link" routerLink="/lab02/student">LAB 2</a>
+                    <a class="nav-link" routerLink="/lab02/student">LAB 2</a>
                 </li>
-               
-              </ul>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Lap05
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" routerLink="Lab03/student">Ex 1</a>
+                        <a class="dropdown-item" routerLink="Lab03/salary">Ex 2</a>
+                        
+                        <a class="dropdown-item" routerLink="Lab03/coffee">Ex 3</a>
+                    </div>
+                </li>
+                
+            </ul>
+
+        </div>
     </nav>
 </header>

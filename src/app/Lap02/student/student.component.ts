@@ -8,7 +8,7 @@ import { students } from '../students';
 export class StudentComponent implements OnInit {
   searchText;
   listStudents = []
-  config : any;
+  config;
   constructor() { 
     this.config = {
       itemsPerPage: 3,
@@ -22,23 +22,16 @@ export class StudentComponent implements OnInit {
 
   onDeleteStudent(id) {
     let isDelete = confirm("Are you sure delete this student?")
-    if (isDelete) {
+    if (isDelete ) {
       let temp = this.listStudents.filter(student => {
         return student.id !== id
       })
       this.listStudents = [...temp]
     }
   }
-
-  onChangePage(pageOfItems: Array<any>) {
-    // update current page of items
-    pageOfItems = pageOfItems;
-}
-
-  pageOfItems: Array<any>;
-
+  
   ngOnInit() {
-    this.listStudents = students.map((student, i) => (student));
+    this.listStudents = students.map((student) => (student));
   }
 
 }

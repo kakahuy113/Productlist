@@ -1,0 +1,36 @@
+<div class="container">
+    <form [formGroup]="student" (ngSubmit)="onSubmit()" class="form-group mt-5">
+        <div class="form-group">
+            <label for="long">Name</label>
+            <input type="text" id="long" formControlName="name" required class="form-control" placeholder="Enter long">
+        </div>
+        <div class="form-group">
+            <label for="wide">Birth</label>
+            <input type="text" id="wide" required formControlName="birth" class="form-control" placeholder="Enter wide">
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select class="form-control" formControlName="gender" id="gender">
+                <option selected>Male</option>
+                <option>Female</option>
+
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="point">Point</label>
+            <input type="text" id="point" formControlName="point" required class="form-control"
+                placeholder="Enter wide">
+        </div>
+        <div class="form-group">
+            <label for="power">Power</label>
+            <input type="text" id="power" disabled [(ngModel)]="power2" [ngModelOptions]="{standalone: true}"
+                class="form-control" placeholder="Enter wide">
+        </div>
+
+
+
+        <div>
+            <button class="btn btn-primary">grade</button>
+        </div>
+    </form>
+</div>

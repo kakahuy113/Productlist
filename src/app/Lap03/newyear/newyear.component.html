@@ -1,0 +1,39 @@
+<div class="container mt-5">
+    <div class="card ">
+        <div class="card-header bg-light">TÍNH THƯỞNG TẾT NGUYÊN ĐÁN</div>
+        <div class="card-body">
+            <form action="/action_page.php">
+                <div class="form-group">
+                    <label for="wretangle">Họ và tên</label>
+                        <input type="text" class="form-control" [(ngModel)]="nv.name" [ngModelOptions]="{standalone: true}">
+                    <label for="wretangle">Lương</label>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" [(ngModel)]="nv.salary"
+                            [ngModelOptions]="{standalone: true}">
+                        <div class="input-group-append">
+                            <span class="input-group-text">VND</span>
+                        </div>
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label" for="radio1">
+                            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="Nữ"
+                            [(ngModel)]="nv.gender" checked>Nữ
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label" for="radio2">
+                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="Nam"
+                            [(ngModel)]="nv.gender">Nam
+                        </label>
+                    </div>
+                    <br>
+                    <label for="wretangle">Độ tuổi</label>
+                        <select class="form-control" id="sel1" name="sellist1" [(ngModel)]="nv.rate">
+                        <option *ngFor="let t of data" value="{{t.rate}}">{{t.age}}</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="card-footer">TIỀN THƯỞNG {{reward()}} VNĐ</div>
+    </div>
+</div>

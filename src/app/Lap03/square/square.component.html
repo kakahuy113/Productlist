@@ -1,0 +1,24 @@
+<div class="container">
+    <form class="form-group mt-5">
+        <div class="form-group">
+            <label for="long">Long</label>
+            <input type="text" id="long" [(ngModel)]="long" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Enter long">
+        </div>
+        <div class="form-group">
+            <label for="wide">Wide</label>
+            <input type="text" id="wide" [(ngModel)]="wide" [ngModelOptions]="{standalone: true}"   class="form-control" placeholder="Enter wide">
+        </div>
+        <div class="form-group">
+            <label for="area">Area</label>
+            <input type="text" id="area" disabled class="form-control" [(ngModel)]="area" [ngModelOptions]="{standalone: true}"  placeholder="Enter wide">
+        </div>
+        <div class="form-group">
+            <label for="Cv">Chu vi</label>
+            <input type="text" id="Cv" disabled [(ngModel)]="cv" [ngModelOptions]="{standalone: true}"  class="form-control" placeholder="Enter wide">
+        </div>
+
+        <div>
+            <button class="btn btn-primary" (click)="caculate()">Caculate</button>
+        </div>
+    </form>
+</div>

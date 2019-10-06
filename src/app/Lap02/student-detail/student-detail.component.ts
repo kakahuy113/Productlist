@@ -11,7 +11,7 @@ import { Location} from '@angular/common'
 })
 export class StudentDetailComponent implements OnInit {
   student;
-  enrollments;
+  enrollments; 
   courses={};
   listofStudent = [...students]
   listofCourse = [...courses]
