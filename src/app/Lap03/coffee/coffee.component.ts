@@ -37,13 +37,7 @@ export class CoffeeComponent implements OnInit {
     let total = 0;
     for (let item of this.listitems) {
       if(item.checked)
-      total += item.amount * item.price;
-    }
+      total += item.amount * item.price;    }
     return total;
   }
-
-
-
-
-
 }

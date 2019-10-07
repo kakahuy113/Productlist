@@ -25,7 +25,9 @@ import { StudentDetailComponent } from './Lap02/student-detail/student-detail.co
 import { SquareComponent } from './Lap03/square/square.component';
 import { StudentComponent2 } from './Lap03/student/student.component';
 import { NewyearComponent } from './Lap03/newyear/newyear.component';
-import { CoffeeComponent } from './Lap03/coffee/coffee.component'
+import { CoffeeComponent } from './Lap03/coffee/coffee.component';
+import { FilmlsComponent } from './Lap06/filmls/filmls.component';
+import { DetailflimComponent } from './Lap06/detailflim/detailflim.component'
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { CoffeeComponent } from './Lap03/coffee/coffee.component'
     SquareComponent,
     StudentComponent2,
     NewyearComponent,
-    CoffeeComponent
+    CoffeeComponent,
+    FilmlsComponent,
+    DetailflimComponent
     
   ],
   imports: [
