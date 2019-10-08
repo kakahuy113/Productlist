@@ -9,11 +9,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DetailflimComponent implements OnInit {
   film: any;
-  constructor(private router: ActivatedRoute, private http:HttpClient ) { }
+  constructor(private router: ActivatedRoute, private http:HttpClient, private service : Detail06Service) { }
 
   ngOnInit() {
     const url = this.router.snapshot.paramMap.get('url');
-    this.getFilmId(url).subscribe(data =>{
+    this.service.geturl(url).subscribe(data =>{
       this.film=data;
     })
   }

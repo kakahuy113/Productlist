@@ -1,17 +1,15 @@
-
-
 <div class="container" *ngIf="film">
-    
+
         <div class="alert alert-dark alert-dismissible fade show">
-                <p>{{film.title}}</p>        
-            </div>
-    <div class="row">
-        <div class="col-md-3">
-                <img class="card-img-top" src="../../../assets/images/films.jpg">
+                <p>{{film.title}}</p>
         </div>
-        <div class="col-md-9">
-                {{film.opening_crawl}}
+        <div class="row">
+                <div class="col-md-3">
+                        <img class="card-img-top" src="../../../assets/images/films.jpg">
+                </div>
+                <div class="col-md-9">
+                        {{film.opening_crawl}}
+                </div>
         </div>
-    </div>
-    <button class="btn btn-primary" (click)="Onback()">Back</button>
+        <button class="btn btn-primary" (click)="Onback()">Back</button>
 </div>

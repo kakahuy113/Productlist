@@ -5,29 +5,31 @@
     <section>
         <div class="row">
             <div class="card col-md-4" *ngFor='let film of listFilms' style="margin-bottom: 3px">
-                            <img class="card-img-top" src="../../../assets/images/films.jpg">
-                            <div class="card-block">
-                                <figure class="profile">
-                                    <img src="../../../assets/images/films.jpg" class="profile-avatar" alt="">
-                                </figure>
-                                <h4 class="card-title mt-3">{{film.title}}</h4>
-                                <div class="meta">
-                                </div>
-                                <div class="card-text">
-                                        <div id="summary">
-                                                <p class="collapse" id="collapseSummary">  
-                                                    {{film.opening_crawl}}
-                                                </p>
-                                                <a class="collapsed" data-toggle="collapse" href="#collapseSummary" aria-expanded="false" aria-controls="collapseSummary"></a>
-                                        </div>
-                                        <p>Director : {{film.director}}</p>
-                                        <p>Producer:  {{film.producer}}</p>
-                                        <p>Release_Date:  {{film.release_date}}</p>
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <button class="btn btn-secondary float-right btn-sm" [routerLink]="['/Lab06/films/', film.url  ]">show</button>
-                            </div>
+                <img class="card-img-top" src="../../../assets/images/films.jpg">
+                <div class="card-block">
+                    <figure class="profile">
+                        <img src="../../../assets/images/films.jpg" class="profile-avatar" alt="">
+                    </figure>
+                    <h4 class="card-title mt-3">{{film.title}}</h4>
+                    <div class="meta">
+                    </div>
+                    <div class="card-text">
+                        <div id="summary">
+                            <p class="collapse" id="collapseSummary">
+                                {{film.opening_crawl}}
+                            </p>
+                            <a class="collapsed" data-toggle="collapse" href="#collapseSummary" aria-expanded="false"
+                                aria-controls="collapseSummary"></a>
+                        </div>
+                        <p>Director : {{film.director}}</p>
+                        <p>Producer: {{film.producer}}</p>
+                        <p>Release_Date: {{film.release_date}}</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-secondary float-right btn-sm"
+                        [routerLink]="['/Lab06/films/', film.url  ]">show</button>
+                </div>
             </div>
         </div>
     </section>

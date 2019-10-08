@@ -11,17 +11,15 @@ export class FilmlsComponent implements OnInit {
   inforFilm: any;
   listFilms:any;
 
-  constructor( private http: HttpClient ) { }
+  constructor( private http: HttpClient , private service : Detail06Service ) { }
 
   ngOnInit() {
-    this.getAllData().subscribe(data=>{
+    this.service.getdata().subscribe(data=>{
       this.inforFilm=data;
       this.listFilms= this.inforFilm.results;
     })
   }
-  getAllData(){
-    return this.http.get(this.url);
-  }
+ 
 
 
 }
