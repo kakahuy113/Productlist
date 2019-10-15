@@ -16,6 +16,7 @@ import { NewyearComponent } from './Lap03/newyear/newyear.component';
 import { CoffeeComponent } from './Lap03/coffee/coffee.component';
 import { FilmlsComponent} from './Lap06/filmls/filmls.component';
 import { DetailflimComponent } from './Lap06/detailflim/detailflim.component';
+import { HttpstudentComponent } from './Lapp05/httpstudent/httpstudent.component'
 const routes: Routes = [
   { path: 'product', component: ProductsComponent  },
   { path: 'ex1', component: Ex1Component  },
@@ -32,7 +33,8 @@ const routes: Routes = [
   { path: 'Lab03/salary', component : NewyearComponent },
   { path: 'Lab03/coffee', component : CoffeeComponent },
   { path: 'Lab06/films' , component : FilmlsComponent }, 
-  { path: 'Lab06/films/:url' , component : DetailflimComponent } 
+  { path: 'Lab06/films/:url' , component : DetailflimComponent },
+  { path : 'Lab07' , component : HttpstudentComponent} 
   
 ];
 

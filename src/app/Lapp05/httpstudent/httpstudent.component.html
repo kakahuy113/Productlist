@@ -1,0 +1,57 @@
+<form action="">
+    <div class="row">
+        <div class="col-2">Họ và Tên</div>
+        <div class="col-3">
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="formStudent.fullName"
+                     [ngModelOptions]="{standalone: true}">
+            </div>
+        </div>
+        <div class="col-7"></div>
+
+        <div class="col-2">Ngày sinh</div>
+        <div class="col-7">
+            <div class="form-group">
+                <input type="date" class="form-control" [(ngModel)]="formStudent.birthday"
+                     [ngModelOptions]="{standalone: true}">
+            </div>
+        </div>
+        <div class="col-3"></div>
+
+        <div class="col-2">Điểm</div>
+        <div class="col-2">
+            <div class="form-group">
+                <input type="number" class="form-control" max="10" min="0" [(ngModel)]="formStudent.mark"
+                     [ngModelOptions]="{standalone: true}">
+            </div>
+        </div>
+        <div class="col-8"></div>
+
+        <button class="btn btn-primary col-12 mb-2" *ngIf='!showFormEdit' (click)='Add(formStudent)'>Thêm</button>
+        <button class="btn btn-danger col-12" *ngIf='!showFormEdit' (click)='Cancel()'>Hủy</button>
+
+        <button class="btn btn-success col-12 mb-2" *ngIf='showFormEdit' (click)='Accept();'>Lưu</button>
+        <button class="btn btn-danger col-12" *ngIf='showFormEdit' (click)='Cancel()'>Hủy</button>
+    </div>
+   
+    <table class="table">
+        <thead>
+            <th>#</th>
+            <th>Ho Va Ten</th>
+            <th>Ngay Sinh</th>
+            <th>Diem</th>
+            <th>Xep Loai</th>
+            <th>Action</th>
+        </thead>
+        <tbody *ngFor="let student of students">
+            <td>{{student.id}}</td>
+            <td>{{student.fullName}}</td>
+            <td>{{student.birthday}}</td>
+            <td>{{student.mark}}</td>
+            <td>{{xeploai(student.mark)}}</td>
+            <td>
+                <button class="btn btn-primary mr-2" (click)='Edit(student)'>Sửa</button>
+                <button class="btn btn-danger mr-2" (click)='Delete(student.id)'>Xóa</button>
+            </td>
+        </tbody>
+    </table>

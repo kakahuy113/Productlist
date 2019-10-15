@@ -27,7 +27,9 @@ import { StudentComponent2 } from './Lap03/student/student.component';
 import { NewyearComponent } from './Lap03/newyear/newyear.component';
 import { CoffeeComponent } from './Lap03/coffee/coffee.component';
 import { FilmlsComponent } from './Lap06/filmls/filmls.component';
-import { DetailflimComponent } from './Lap06/detailflim/detailflim.component'
+import { DetailflimComponent } from './Lap06/detailflim/detailflim.component';
+import { HttpstudentComponent } from './Lapp05/httpstudent/httpstudent.component';
+
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { DetailflimComponent } from './Lap06/detailflim/detailflim.component'
     NewyearComponent,
     CoffeeComponent,
     FilmlsComponent,
-    DetailflimComponent
+    DetailflimComponent,
+    HttpstudentComponent,
+    
     
   ],
   imports: [
